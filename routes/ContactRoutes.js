@@ -1,9 +1,7 @@
 const Contact = require('../models/Contact')
-const User = require('../models/User')
-
+const checkToken = require('../utils/jwt/checkToken')
 const router = require('express').Router()
 
-router.post('/register',User.register)
-router.post('/login',User.login)
 
+router.get('/all',checkToken,Contact.showContacts)
 module.exports = router

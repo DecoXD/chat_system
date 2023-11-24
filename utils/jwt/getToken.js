@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 
 
 const getToken = async (req) => {
-    
+   
     if(!req.headers.authorization){
         return null
     }
